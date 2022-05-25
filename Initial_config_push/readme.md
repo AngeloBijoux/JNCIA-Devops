@@ -1,0 +1,1 @@
+this script will attempt to configure a blank JUNOS os device using a predefined xml file. 

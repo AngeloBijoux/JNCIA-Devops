@@ -1,0 +1,1 @@
+script to check the directory useage of one or many JUNOS devices
