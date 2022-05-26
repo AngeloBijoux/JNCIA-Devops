@@ -1,0 +1,1 @@
+With this script we will use Netmiko to run through our list of hosts and configure them to accept external netconf connections .

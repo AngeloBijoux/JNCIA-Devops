@@ -8,23 +8,23 @@ from jnpr.junos import Device
 from jnpr.junos.utils.fs import FS
 from jnpr.junos.exception import *
 import getpass
-import ipaddress
-from pathlib import Path
+import yaml
+
 
 
 
 NUM_PROCESSES = 6
-hosts = []
-Devices = Path(__file__).with_name('hosts.txt')
-with Devices.open('r') as ip:
-    for ip in Devices:
-        ip = ip.strip()
-        try:
-            ip = ipaddress.ip_address(str(ip))
-            hosts = hosts.append(ip)
-        except ValueError:
-            print('Invalid IP in hosts file'.format(ip))
-            continue
+
+filename = "check_filesystem_use/hosts.yml"
+def get_hosts_from_file(filename):
+    with open(filename) as f:
+        content = yaml.load_all(f)
+    return(content)
+
+inventory = dict(get_hosts_from_file(filename))
+
+
+
 
 username=input('Input the username used to access the device'),
 password=getpass.getpass('Input the password used to access the device')

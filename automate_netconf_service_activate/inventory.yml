@@ -1,0 +1,14 @@
+---
+R1 : 
+  model : vMX 
+  address : 66.129.234.213
+  ssh : 38005
+  netconf : 38003
+  rest : 38004
+
+R2 : 
+  model : vMX 
+  address : 66.129.234.213
+  ssh : 38008
+  netconf : 38006
+  rest : 38007
